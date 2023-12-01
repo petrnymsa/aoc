@@ -1,0 +1,13 @@
+{
+    "configurations": [
+        {
+            "name": "Run sample",
+            "type": "dart",
+            "request": "launch",
+            "program": "bin/main.dart",
+            "args": [
+                "inputs/01/debug.txt"
+            ]
+        }
+    ]
+}
