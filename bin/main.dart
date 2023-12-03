@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:aoc_2023/02.dart';
+import 'package:aoc_2023/03.dart';
 
 void main(List<String> arguments) async {
   List<String> lines = [];
