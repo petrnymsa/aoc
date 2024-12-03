@@ -1,56 +1,38 @@
+import 'package:collection/collection.dart';
+
 void solvePart1(List<String> lines) {
-  int sum = 0;
+  final parts =
+      lines.map((e) => e.split((RegExp(r'\s+'))).map((e) => int.parse(e)).toList()).map((e) => (e[0], e[1])).toList();
 
-  final wordNumbers = [
-    ('one', 'o1e'),
-    ('two', 't2o'),
-    ('three', 't3e'),
-    ('four', 'f4r'),
-    ('five', 'f5e'),
-    ('six', 's6x'),
-    ('seven', 's7n'),
-    ('eight', 'e8t'),
-    ('nine', 'n9e')
-  ];
+  final diffs = <int>[];
 
-  for (final input in lines) {
-    final numbers = <int>[];
+  final left = parts.map((e) => e.$1).toList()..sort();
+  final right = parts.map((e) => e.$2).toList()..sort();
 
-    var line = input;
+  for (var i = 0; i < left.length; i++) {
+    final diff = (left[i] - right[i]).abs();
+    diffs.add(diff);
 
-    for (var element in wordNumbers) {
-      line = line.replaceAll(element.$1, element.$2);
-    }
-
-    print('$input : $line');
-
-    for (var i = 0; i < line.length; i++) {
-      final c = line.codeUnitAt(i);
-      final intValue = _isNumber(c);
-
-      if (intValue != null) {
-        numbers.add(intValue);
-      }
-    }
-
-    int? value;
-    if (numbers.isNotEmpty) {
-      final a = numbers.first;
-      final b = numbers.last;
-
-      value = int.parse('$a$b');
-      sum += value;
-    }
-    print('$line : $value');
+    print('${left[i]} - ${right[i]} = $diff');
   }
 
-  print(sum);
+  print(diffs.sum);
 }
 
-int? _isNumber(int codeValue) {
-  final intValue = codeValue - 48;
+void solvePart2(List<String> lines) {
+  final parts =
+      lines.map((e) => e.split((RegExp(r'\s+'))).map((e) => int.parse(e)).toList()).map((e) => (e[0], e[1])).toList();
 
-  if (intValue >= 0 && intValue <= 9) return intValue;
+  final left = parts.map((e) => e.$1).toList()..sort();
+  final right = parts.map((e) => e.$2).toList()..sort();
 
-  return null;
+  var similarity = 0;
+
+  for (final leftNumber in left) {
+    final occurences = right.where((x) => x == leftNumber).length;
+
+    similarity += leftNumber * occurences;
+  }
+
+  print(similarity);
 }

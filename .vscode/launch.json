@@ -5,8 +5,9 @@
             "type": "dart",
             "request": "launch",
             "program": "bin/main.dart",
+            "cwd": "${workspaceFolder}/2024",
             "args": [
-                "inputs/01/debug.txt"
+                "inputs/03/input.txt"
             ]
         }
     ]

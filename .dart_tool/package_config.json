@@ -225,9 +225,9 @@
     },
     {
       "name": "typed_data",
-      "rootUri": "file:///C:/Users/nymsa/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.4.0",
+      "rootUri": "file:///C:/Users/nymsa/AppData/Local/Pub/Cache/hosted/pub.dev/typed_data-1.3.2",
       "packageUri": "lib/",
-      "languageVersion": "3.5"
+      "languageVersion": "2.17"
     },
     {
       "name": "uri",
@@ -260,10 +260,8 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-12-01T19:53:58.647923Z",
+  "generated": "2024-12-02T10:39:58.044207Z",
   "generator": "pub",
-  "generatorVersion": "3.5.4",
-  "flutterRoot": "file:///C:/Users/nymsa/fvm/versions/stable",
-  "flutterVersion": "3.24.5",
+  "generatorVersion": "3.4.1",
   "pubCache": "file:///C:/Users/nymsa/AppData/Local/Pub/Cache"
 }
