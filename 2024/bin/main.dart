@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:aoc_2024/03.dart';
+import 'package:aoc_2024/05.dart';
 
 void main(List<String> arguments) async {
   List<String> lines = [];
@@ -13,6 +13,8 @@ void main(List<String> arguments) async {
       lines.add(line);
     }
   }
-
+  print('PART 1\n=====\n');
+  solvePart1(lines);
+  print('PART 2\n=====\n');
   solvePart2(lines);
 }
